@@ -1,27 +1,62 @@
-:root {
-    --primary-color: #c40259;
-    --secondary-color: #370099;
-    --dark-light: #0f0f37;
-    --grey-blue-color: #5F6F94;
-    --cards-bg: #f3f3faaf
+* {
+  margin: 0;
+  padding: 0 !important;
+  box-sizing: border-box;
 }
-.header{
+
+:root {
+  --primary-color: #c40259;
+  --secondary-color: #370099;
+  --dark-light: #0f0f37;
+  --grey-blue-color: #5F6F94;
+  --cards-bg: #f3f3faaf
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer div {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+}
+
+.header {
+  position: relative;
   background-color: var(--grey-blue-color);
   z-index: 999;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
 }
-.logo{
+
+.logo {
   width: 3.5rem;
   height: 3.5rem;
+  transition: all 0.15s linear;
 }
-.click-img{
+
+.logo:hover {
+  opacity: 0.8;
+  text-decoration: underline !important;
+}
+
+.click-img {
   width: 40%;
   height: 30%;
 }
 
-.cobons{
+.cobons {
   cursor: pointer;
 }
-.cobons div{
+
+.cobons div {
   border-radius: 25px;
   background-color: var(--cards-bg);
   width: 30%;
@@ -32,46 +67,52 @@
   align-items: center;
   transition: all 0.15s linear;
 }
-.cobons div:hover{
+
+.cobons div:hover {
   transform: translateY(-1.5px);
   box-shadow: 0px 0px 5px 2px #777;
 }
-.cobons div p:first-child{
+
+.cobons div p:first-child {
   color: var(--primary-color);
 }
-.cobons div img, footer img{
+
+.cobons div img,
+footer img {
   width: 10rem;
   height: 10rem;
 }
-.vip-cobon div img:first-child{
+
+.vip-cobon div img:first-child {
   width: 6rem;
   height: 6rem;
 }
-footer a {
-  transition: all 0.15s linear;
-}
-footer a:hover{
-  opacity: 0.8;
-  text-decoration: underline !important;
-}
-ul{
+
+ul {
   list-style: none;
 }
-ul li{
+
+ul li {
   font-size: 1.125rem;
 }
-@media (min-width: 320px) and (max-width: 767px){
-  .top-main, .cobons, .contact{
+
+@media (max-width: 767px) {
+
+  .top-main,
+  .cobons,
+  .contact {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .cobons div{
+
+  .cobons div {
     margin: 1rem 0px;
     width: 70%;
   }
-  ul li{
+
+  ul li {
     font-size: 1rem;
     margin: 0.3rem 0px;
   }
